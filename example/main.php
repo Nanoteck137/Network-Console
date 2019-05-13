@@ -1,21 +1,10 @@
-# Network-Console
-
-Work in progresss
-
-# Examples
-
-## PHP
-
-Add to php.ini:
-extension=php_sockets.dll 
-
-```php
+<?php
 function socket_log(string $message)
 {
     $socket = socket_create(AF_INET, SOCK_STREAM, 0);
-    
+
     socket_connect($socket, "localhost", 12345);
-    
+
     $obj = new stdClass();
     $obj->type = 1;
     $obj->message = $message;
@@ -25,4 +14,4 @@ function socket_log(string $message)
 
     socket_close($socket);
 }
-```
+?>
